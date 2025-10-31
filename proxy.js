@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     const response = await fetch(targetUrl);
     const text = await response.text();
 
-    const match = text.match(/No Pendidikan:<\/td>\s*<td[^>]*>([^<]+)/i);
+    const match = text.match(/NOPEND :<\/td>\s*<td[^>]*>([^<]+)/i);
     if (match) {
       res.status(200).json({ nopendidikan: match[1].trim() });
     } else {
