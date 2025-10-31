@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const targetUrl = `https://spmp.psmza.edu.my/stdrprofilehep.jsp?nokp=${encodeURIComponent(nokp)}`;
+    const targetUrl = `http://spmp.psmza.edu.my/stdrprofilehep.jsp?nokp=${encodeURIComponent(nokp)}`;
     const response = await fetch(targetUrl);
     const text = await response.text();
 
